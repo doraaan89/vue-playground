@@ -1,13 +1,19 @@
 <template>
 	<div id="app">
-		<nav>
-			<router-link to="/">Home</router-link> |
-			<router-link to="/about">About</router-link>
-		</nav>
-		<router-view />
+		<LayoutDefault>
+			<router-view />
+		</LayoutDefault>
 	</div>
 </template>
 
+<script>
+import LayoutDefault from './components/layout/LayoutDefault.vue';
+export default {
+	components: {
+		LayoutDefault,
+	},
+};
+</script>
 <style lang="scss">
 #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
