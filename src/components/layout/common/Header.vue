@@ -15,3 +15,10 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+#header {
+	min-height: 2.5rem;
+	margin-top: 1.5rem;
+}
+</style>
