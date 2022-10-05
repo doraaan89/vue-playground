@@ -1,10 +1,23 @@
 <template>
-	<footer id="footer">Footer Area</footer>
+	<footer id="footer">
+		{{ footerText }}
+		<button @click="test">emit test</button>
+	</footer>
 </template>
 
 <script>
 export default {
-	name: 'footer',
+	name: 'Footer',
+	data() {
+		return {
+			footerText: 'Footer Area',
+		};
+	},
+	methods: {
+		test() {
+			this.$emit('test', this.footerText);
+		},
+	},
 };
 </script>
 
