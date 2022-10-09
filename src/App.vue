@@ -1,17 +1,9 @@
 <template>
-<<<<<<< HEAD
 	<component :is="isMobile ? 'LayoutDefault' : 'LayoutPC'" id="app">
 		<main>
 			<router-view />
 		</main>
 	</component>
-=======
-	<div id="app">
-		<LayoutDefault>
-			<router-view />
-		</LayoutDefault>
-	</div>
->>>>>>> parent of 4ecbb85 (reset css 적용)
 </template>
 
 <script>
