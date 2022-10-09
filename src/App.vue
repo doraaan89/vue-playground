@@ -23,6 +23,9 @@ export default {
 			return window.innerWidth <= minWidth;
 		},
 	},
+	mounted() {
+		console.log(this.$firebase);
+	},
 };
 </script>
 <style lang="scss">
