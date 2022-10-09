@@ -1,14 +1,38 @@
 <template>
-	<LayoutDefault id="app">
-		<router-view />
-	</LayoutDefault>
+<<<<<<< HEAD
+	<component :is="isMobile ? 'LayoutDefault' : 'LayoutPC'" id="app">
+		<main>
+			<router-view />
+		</main>
+	</component>
+=======
+	<div id="app">
+		<LayoutDefault>
+			<router-view />
+		</LayoutDefault>
+	</div>
+>>>>>>> parent of 4ecbb85 (reset css 적용)
 </template>
 
 <script>
 import LayoutDefault from './components/layout/LayoutDefault.vue';
+import LayoutPC from './components/layout/LayoutPC.vue';
 export default {
+	data() {
+		return {};
+	},
 	components: {
 		LayoutDefault,
+		LayoutPC,
+	},
+	computed: {
+		isMobile() {
+			const minWidth = 1024;
+			return window.innerWidth <= minWidth;
+		},
+	},
+	mounted() {
+		console.log(this.$firebase);
 	},
 };
 </script>
@@ -19,6 +43,10 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
+}
+
+main {
+	height: calc(100vh - 76px - 44px);
 }
 
 nav {
