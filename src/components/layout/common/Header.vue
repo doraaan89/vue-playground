@@ -27,7 +27,6 @@ export default {
 	},
 };
 </script>
-<<<<<<< HEAD
 
 <style lang="scss">
 #header {
@@ -41,5 +40,3 @@ export default {
 	}
 }
 </style>
-=======
->>>>>>> parent of 4ecbb85 (reset css 적용)

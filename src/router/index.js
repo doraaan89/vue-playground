@@ -7,6 +7,11 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
+		name: 'test',
+		component: () => import('../views/FirebaseTest.vue'),
+	},
+	{
+		path: '/home',
 		name: 'home',
 		component: HomeView,
 	},

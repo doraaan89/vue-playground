@@ -23,9 +23,16 @@ export default {
 			return window.innerWidth <= minWidth;
 		},
 	},
-	mounted() {
-		console.log(this.$firebase);
-	},
+	// mounted() {
+	// 	const db = this.$firebase.firestore();
+	// 	db.collection('scale')
+	// 		.get()
+	// 		.then(res => {
+	// 			res.forEach(doc => {
+	// 				console.log(doc.data());
+	// 			});
+	// 		});
+	// },
 };
 </script>
 <style lang="scss">
